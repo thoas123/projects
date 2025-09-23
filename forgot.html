@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label {
+            display: block;
+            color: rgb(5, 44, 78);
+        }
+        
+        input {
+            border: none;
+            border-bottom: 2px solid grey;
+            width: auto;
+            padding: 5px;
+        }
+        
+        input::placeholder {
+            display: none;
+            color: rgb(85, 3, 17);
+        }
+        
+        input::placeholder:hover {
+            display: block;
+        }
+        
+        .container {
+            max-width: 250px;
+            box-sizing: border-box;
+            background-color: rgb(146, 137, 146);
+            padding-left: 4px;
+            margin: 0px;
+            border-radius: 8px
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>Account recovery from wrong password</h3>
+    <div class="container">
+        <label>Email:</label>
+        <input type="email" id="email" placeholder="enter your email"><br><br>
+        <label>Password:</label>
+        <input type="passsword" id="password" placeholder="create a strong password"><br><br>
+
+        <button class="reset-btn" type="button" onclick="reset()">Reset</button>
+
+
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function reset() {
+            let email = document.getElementById('email').value;
+            let password = document.getElementById('password').value;
+            let message = document.getElementById('message');
+            if (email == "otienothoas@gmail.com" && password !== "") {
+                message.innerHTML = "account restored";
+            } else {
+                message.innerHTML = "error on recovery,a link has been sent to your email to reset your password";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

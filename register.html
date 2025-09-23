@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register</title>
+    <style>
+        button {
+            background-color: blue;
+            color: white;
+        }
+        
+        input {
+            border: none;
+            border-bottom: 2px solid rgb(19, 0, 0);
+            outline: none;
+            padding: 5px;
+            width: 200px;
+        }
+        
+        label {
+            font-size: 20px;
+            display: block;
+            padding-bottom: 4px;
+            color: blue;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <h2>Creation of an Account</h2>
+
+    <label>Email:</label>
+    <input type="email" id="email"><br><br>
+
+    <label>Password:</label>
+    <input type="password" id="password"><br><br>
+
+    <button type="button" onclick="register()">register</button>
+    <p id="message"></p>
+
+    <script>
+        function register() {
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let message = document.getElementById("message");
+
+            if (email !== "" && password !== "") {
+                message.style.color = "green";
+                message.innerHTML = "✅ Account created successfully!";
+            } else {
+                message.style.color = "red";
+                message.innerHTML = "❌ Please enter valid credentials!";
+            }
+        }
+    </script>
+</body>
+
+</html>

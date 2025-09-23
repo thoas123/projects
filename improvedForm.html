@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            max-height: 100vh;
+        }
+        
+        .account {
+            display: inline;
+        }
+        
+        .container {
+            background-color: purple;
+            height: 300px;
+            width: 600px;
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-right: 10px;
+            text-align: center;
+            padding: 4px;
+            border-radius: 32px;
+            overflow: hidden;
+            margin-top: 12px;
+        }
+        
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        input::placeholder {
+            font-size: 10px;
+            font-weight: italic;
+            text-align: left;
+            padding-left: 10px;
+        }
+        
+        input:hover::placeholder {
+            color: rgb(49, 85, 8);
+            width: auto;
+            font-size: large;
+        }
+        
+        label {
+            font-size: 20px;
+        }
+        
+        #button {
+            color: black;
+            background-color: white;
+            font-size: 10px;
+            align-items: center;
+            width: 200px;
+            height: 20px;
+            border-radius: 32px;
+        }
+        
+        #button:hover {
+            background-color: orange;
+        }
+        
+        .form-label {
+            display: block;
+        }
+        
+        .form-input {
+            width: 38%;
+            border: none;
+            outline: none;
+            padding: 0;
+            font-size: 14px;
+            border-radius: 16px;
+            border-width: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form id="login" class="form" action="" method="">
+            <label class="form-label" for="email">email</label>
+            <input class="form-input" type="email" id="email" required="email" placeholder="email"><br><br>
+            <label class="form-label" for="password">Password</label>
+            <input class="form-input" type="psw" id="password" placeholder="password"><br><br> <input class="checkbox" type="checkbox">Remember Me &nbsp;&nbsp;<a href="forgot.html">Forgot Password?</a><br><br>
+            <button type="submit" id="button">Login</button><br><br>
+            <div class="account">Don't have an account?</div>&nbsp; <a href="register.html">Register</a>
+
+        </form>
+
+
+    </div>
+    <script>
+        const correctEmail = 'otienothoas@gmail.com';
+        const correctPassword = 'trevor';
+        document.getElementById("login").addEventListener("submit", function(e) {
+            e.preventDefault();
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+
+            if (email === correctEmail && password === correctPassword) {
+                alert("Login successful!");
+                // Redirect to another page
+                window.location.href = "dashboard.html";
+            } else {
+                alert("Invalid email or password. Try again.");
+            }
+        });
+    </script>
+</body>
+
+</html>

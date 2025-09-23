@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>a todo app</title>
+</head>
+
+<body>
+    <h2> to do list app</h2>
+    <input type="text" id="taskInput">
+    <button onclick="addTask()">Add</button>
+    <ul id="taskList"></ul>
+
+    <script>
+        function addTask() {
+            let input = document.getElementById("taskInput");
+            let task = input.value;
+            if (task === " ") return;
+            let li = document.createElement("li");
+            li.textContent = task + " ";
+
+            let deleteBtn = document.createElement("button");
+            deleteBtn.textContent = "Delete";
+            deleteBtn.onclick = function() {
+                li.remove();
+            };
+            li.appendChild(deleteBtn);
+            document.getElementById("taskList").appendChild(li);
+            input.value = " ";
+        }
+    </script>
+</body>
+
+</html>

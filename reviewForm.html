@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>form</title>
+</head>
+
+<body>
+    <label for="username">Username</label>
+    <input type="text" id="username" placeholder="Trevor">
+    <br><br>
+    <label for="password">Password</label>
+
+    <input type="password" id="password" minlength="5" maxlength="8">
+    <br><br>
+    <label for="email">Email</label>
+    <input type="emali" id="email" placeholder="trevorpoppy@gmail.com"><br><br>
+    <label for="phone #">phone</label>
+    <input type="phone #" id="phone #" maxlength="10"><br><br>
+    <label for="bday">birthdate</label>
+    <input type="date" id="bday"><br><br>
+    <label for="quantity">quantity</label>
+    <input type="number" id="quantity" min="0" max="99" default="1"><br><br>
+    <label for="title">Title:</label>
+    <label for="mr">Mr.</label>
+    <input type="radio" name="title" value="mr">
+    <label for="mr">Ms.</label>
+    <input type="radio" name="title" value="ms">
+    <label for="mr">phD.</label>
+    <input type="radio" name="title" value="phD">
+    <br><br>
+    <label for="payment">Payment</label>
+    <select id="payment">
+    <option>paypall</option>
+    <option>giftcard</option>
+    <option>mpesa</option>
+    <option>ATM card</option>
+    </select><br><br>
+    <label for="subscribe">Subscribe</label>
+    <input type="checkbox" id="subscribe">
+    <br><br>
+    <label for="comment">Comment</label>
+    <textarea cols="5" rows="3"></textarea>
+    <br><br>
+    <label for="file">file</label>
+    <input type="file" id="file" accept="All files">
+    <br><br>
+    <button onclick="submit()" style="color:red; background-color:aquamarine">submit</button>
+    <p id="message"></p>
+    <br>
+    <button style="color:aliceblue; background-color:gray;">reset</button>
+
+    <script>
+        function submit() {
+
+            document.getElementById("message").innerHTML = "Entry Allowed";
+        }
+    </script>
+
+
+</body>
+
+</html>

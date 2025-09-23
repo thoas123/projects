@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Account Creation</title>
+</head>
+
+<body>
+    <h2>Creation of an Account</h2>
+
+    <label>Email:</label>
+    <input type="text" id="email"><br><br>
+
+    <label>Password:</label>
+    <input type="password" id="password"><br><br>
+
+    <!-- Button should not reload -->
+    <button type="button" onclick="register()">Register</button>
+
+    <!-- Message placeholder -->
+    <p id="message"></p>
+
+    <script>
+        function register() {
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let message = document.getElementById("message");
+
+            if (email !== "" && password !== "") {
+                message.style.color = "green";
+                message.innerHTML = "✅ Account created successfully!";
+            } else {
+                message.style.color = "red";
+                message.innerHTML = "❌ Please enter valid credentials!";
+            }
+        }
+    </script>
+</body>
+
+</html>
