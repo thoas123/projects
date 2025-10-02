@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator for Age</title>
+    <style>
+        .b-day {
+            display: block;
+            background-color: rgb(99, 96, 96);
+            border-color: none;
+            border: none;
+            color: blue;
+        }
+        
+        .calculate {
+            color: lightblue;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <input class="b-day" type="date" id="dob">
+    <button onclick="calculateAge()" class="calculate">Calculate Age</button>
+    <p id="demo"></p>
+    <script>
+        function calculateAge() {
+            const dobInput = document.getElementById("dob").value;
+            if (!dobInput) {
+                document.getElementById("demo").innerText = "please enter a valid year";
+                return;
+            }
+            const today = new Date();
+            const birthdate = new Date(dobInput);
+            let age = today.getFullYear() - birthdate.getFullYear();
+            const monthDiff = today.getMonth() - birthdate.getMonth();
+            const dayDiff = today.getDate() - birthdate.getDate();
+            if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+                age--;
+            }
+
+            document.getElementById("demo").innerText = "your age is " + age;
+
+        }
+    </script>
+
+</body>
+
+</html>
