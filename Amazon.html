@@ -7,15 +7,17 @@
     <title>Amazon website</title>
     <style>
         body {
-            padding-top: 4px;
+            padding-top: 70px;
         }
         
-        .header {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            padding-right: 8px;
-            border-bottom: none;
+        .main {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            column-gap: 50px;
+            row-gap: 50px;
+            position: relative;
+            margin-top: 0px;
+            width: 500px;
         }
         
         button {
@@ -24,40 +26,116 @@
             height: 20px;
             border-radius: 32px;
             display: block;
-            margin-top: 10px;
+            margin-top: auto;
             font-size: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 5px;
         }
         
         img {
-            width: 150px;
-            height: 100px;
+            width: 200px;
+            height: 180px;
         }
         
         .section1 {
             box-sizing: border-box;
-            box-shadow: 2px 4px 3px rgb(124, 123, 123);
+            box-shadow: 2px 4px 3px rgb(139, 138, 138);
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 220px;
             height: auto;
+            padding: 16px 10px 10px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            overflow: hidden;
+            margin: 0 auto;
+            position: sticky;
+        }
+        
+        .ratings {
+            height: 8%;
+        }
+        
+        .header {
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+            position: fixed;
+            top: 0;
+            left: 2px;
+            width: 100%;
+            background-color: grey;
+            margin-bottom: 10px;
+            z-index: 1000;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        input {
+            height: 20px;
+            width: 100%;
+            border-bottom-right-radius: 2px;
+            margin-right: 5px;
+        }
+        
+        .amazon-icon {
+            width: 30px;
+            height: 30px;
+            padding-top: 15px;
+            margin-right: 40px;
+        }
+        
+        .search-icon {
+            margin-right: 80px;
+            width: 80px;
+            height: 50px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .cart-icon {
+            width: 50px;
+            height: 50px;
+            padding: 10px;
+        }
+        
+        .returns-orders {
+            color: white;
+            font-size: 16px;
+            margin-left: 20px;
+            align-self: center;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 10px;
         }
     </style>
+
 
 
 
 </head>
 
 <body>
-    <link rel="stylesheet" href="amazonStyle.css">
+    <div class="header">
+        <img class="amazon-icon" src="amazonStyle.css/amazon-logo-white.png">
+        <input>
+        <img class="search-icon" src="amazonStyle.css/search-icon.png">
+        <a class="returns-orders" href="#">Returns & Orders</a>
+        <img class="cart-icon" src="amazonStyle.css/cart-icon.png">
 
-    <main>
-        <div class="header">
-            <div class="section1">
-                <img src="amazonStyle.css/athletic-cotton-socks-6-pairs (1).jpg" alt="amazon logo">
+    </div>
+    <div class="main">
+        <div class="section1">
+            <img src="amazonStyle.css/athletic-cotton-socks-6-pairs (1).jpg" alt="amazon logo">
 
-                <p>Black and Gray</p>
-                <p>Athletic Cotton</p>
-                <img src="amazonStyle.css/rating-45(1).png">
-                <p>$10.90</p>
-                <select id="number1">
+            <p>Black and Gray</p>
+            <p>Athletic Cotton</p>
+            <img class="ratings" src="amazonStyle.css/rating-4 (1).png">
+            <p>$10.90</p>
+            <select id="number1">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -69,16 +147,16 @@
                     <option>9</option>
                     <option>10</option>
                 </select>
-                <button>Add to Cart</button>
-            </div>
-            <div class="section1">
-                <img src="amazonStyle.css/intermediate-composite-basketball.jpg">
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/intermediate-composite-basketball.jpg">
 
-                <p>Intermediate Size</p>
-                <p>Basketball</p>
-                <p>127</p>
-                <p>$20.95</p>
-                <select id="number2">
+            <p>Intermediate Size</p>
+            <p>Basketball</p>
+            <img class="ratings" src="amazonStyle.css/rating-5.png">
+            <p>$20.95</p>
+            <select id="number2">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -90,15 +168,15 @@
                     <option>9</option>
                     <option>10</option>
                     </select>
-                <button>Add to Cart</button>
-            </div>
-            <div class="section1">
-                <img src="amazonStyle.css/adults-plain-cotton-tshirt-2-pack-teal.jpg">
-                <p>Adults Plain Cotton T-</p>
-                <p>Shirt - 2 pack</p>
-                <p>56</p>
-                <p>$7.99</p>
-                <select id="number3"> 
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/adults-plain-cotton-tshirt-2-pack-teal.jpg">
+            <p>Adults Plain Cotton T-</p>
+            <p>Shirt - 2 pack</p>
+            <img class="ratings" src="amazonStyle.css/rating-5.png">
+            <p>$7.99</p>
+            <select id="number3"> 
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -110,14 +188,14 @@
                     <option>9</option>
                     <option>10</option>
                     </select>
-                <button>Add to Cart</button>
-            </div>
-            <div class="section1">
-                <img src="amazonStyle.css/black-2-slot-toaster.jpg">
-                <p>2 Slot Toaster - Black</p>
-                <p>2197</p>
-                <p>$18.99</p>
-                <select id="number4">
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/black-2-slot-toaster.jpg">
+            <p>2 Slot Toaster - Black</p>
+            <img class="ratings" src="amazonStyle.css/rating-45 (2).png">
+            <p>$18.99</p>
+            <select id="number4">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -129,15 +207,15 @@
                     <option>9</option>
                     <option>10</option>
                  </select>
-                <button>Add to Cart</button>
-            </div>
-            <div class="section1">
-                <img src="amazonStyle.css/6-piece-white-dinner-plate-set.jpg">
-                <p> 6 Piece White Dinner</p>
-                <p>Plate Set</p>
-                <p>37</p>
-                <p>$20.67</p>
-                <select id="number5">
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/6-piece-white-dinner-plate-set.jpg">
+            <p> 6 Piece White Dinner</p>
+            <p>Plate Set</p>
+            <img class="ratings" src="amazonStyle.css/rating-5.png">
+            <p>$20.67</p>
+            <select id="number5">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -149,35 +227,753 @@
                     <option>9</option>
                     <option>10</option>
                     </select>
-                <button>Add to Cart</button>
-
-            </div>
-            <div class="section1">
-                <img src="amazonStyle.css/6-piece-non-stick-baking-set.webp">
-                <p>6-Piece Nonstick, Carbon Steel</p>
-                <p>Oven Bakeware Baking Set</p>
-                <p>175</p>
-                <p>$34.99</p>
-                <select id="number6">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
-                    </select>
-                <button>Add to Cart</button>
-
-            </div>
+            <button>Add to Cart</button>
 
         </div>
+        <div class="section1">
+            <img src="amazonStyle.css/6-piece-non-stick-baking-set.webp">
+            <p>6-Piece Nonstick, Carbon Steel</p>
+            <p>Oven Bakeware Baking Set</p>
+            <img class="ratings" src="amazonStyle.css/rating-45 (2).png">
+            <p>$34.99</p>
+            <select id="number6">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    </select>
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/plain-hooded-fleece-sweatshirt-yellow.jpg">
+            <p>Plain Hooded Fleece </p>
+            <p>Sweatshirt</p>
+            <img class="ratings" src="amazonStyle.css/rating-45 (1).png">317
+            <p>$24.00</p>
+            <select id="number7">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    </select>
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/luxury-tower-set-6-piece.jpg">
+            <p>Luxury Towel Set -Graphite</p>
+            <img class="ratings" src="amazonStyle.css/rating-45 (1).png">144
+            <p>$35.99</p>
+            <select id="number8">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                 </select>
+            <button>Add to Cart</button>
 
-    </main>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/liquid-laundry-detergent-plain.jpg">
+            <p>Liquid Laundry Detergent,110 Loads,82.5FL Oz</p>
+            <img class="ratings" src="amazonStyle.css/rating-45 (1).png">305
+            <p>$28.99</p>
+            <select id="number9">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                   </select>
+            <button>Add to Cart</button>
 
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/knit-athletic-sneakers-gray.jpg">
+            <p>Waterproof Knit Athletic Sneakers-Gray</p>
+            <img class="ratings" src="amazonStyle.css/rating-4 (1).png">89
+            <p>$33.90</p>
+            <select id="number10">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>      
+                </select>
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/women-beach-sandals.jpg">
+            <p>Women's Chiffon Beachwear Cover Up-Black</p>
+            <img class="ratings" src="amazonStyle.css/rating-45 (1).png">
+            <p>$20.70</p>
+            <select id="number11">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    </select>
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/round-sunglasses-black.jpg">
+            <p>Round Sunglasess</p>
+            <img class="ratings" src="amazonStyle.css/rating-45 (1).png">
+            <p>$15.60</p>
+            <select id="number12">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    </select>
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/women-beach-sandals.jpg">
+            <p>Women's Two Strap</p>
+            <p>Buckle Sandals -Tan</p>
+            <img class="ratings" src="amazonStyle.css/rating-45 (1).png">562
+            <p>$24.99</p>
+            <select id="13">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>        
+                </select>
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/blackout-curtain-set-beige.webp">
+            <p>Blackout Curtains Set 4-</p>
+            <p>Pack - Beige</p>
+            <img class="ratings" src="amazonStyle.css/rating-45 (1).png">232
+            <p>$45.99</p>
+            <select id="14">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    </select>
+            <button>Add to Cart</button>
+
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/men-slim-fit-summer-shorts-gray.jpg">
+            <p>Men Slim fit Summer </p>
+            <p>Short</p>
+            <img class="ratings" src="amazonStyle.css/rating-4 (1).png">160
+            <p>$16.99</p>
+            <select id="15">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    </select>
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/electric-glass-and-steel-hot-water-kettle.webp">
+            <p>Electric Glass and Steel</p>
+            <p>Hot Tea Water Kettle</p>
+            <img class="ratings" src="amazonStyle.css/rating-5.png">846
+            <p>$30.74</p>
+            <select id="16">
+                       <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/facial-tissue-2-ply-18-boxes.jpg">
+            <p>Ultra Soft Tisse 2-ply</p>
+            <p>18 Box</p>
+            <img class="ratings" src="amazonStyle.css/rating-4.png">99
+            <p>$23.74</p>
+            <select id="17">
+                       <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/straw-sunhat.webp">
+            <p>Straw lifeguard Sunhat</p>
+            <br>
+            <img class="ratings" src="amazonStyle.css/rating-4.png">215
+            <p>$20.90</p>
+            <select id="18">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/sky-flower-stud-earrings.webp">
+            <p>Sterling Silver Sky</p>
+            <p>Flower Stud Earnings</p>
+            <img class="ratings" src="amazonStyle.css/rating-45 (1).png">52
+            <p>$17.99</p>
+            <select id="19">
+                       <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+            <button>Add to Cart</button>
+
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/women-stretch-popover-hoodie-black.jpg">
+            <p>Women's Stretch</p>
+            <p>Popover Hoodie</p>
+            <img class="ratings" src="amazonStyle.css/rating-45 (1).png">2465
+            <p>$13.74</p>
+            <select id="20">
+                       <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+            <button>Add to Cart</button>
+
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/bathroom-rug.jpg">
+            <p>Bathroom Bath Rug Mat</p>
+            <p>20 x 31 inch - Grey</p>
+            <img class="ratings" src="amazonStyle.css/rating-45 (1).png">119
+            <p>$12.50</p>
+            <select id="21">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+            <button>Add to Cart</button>
+
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/women-knit-ballet-flat-black.jpg">
+            <p>Women's Knit Ballet Flat</p>
+            <br><br>
+            <img class="ratings" src="amazonStyle.css/rating-4.png">326
+            <p>$26.40</p>
+            <select id="22">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+            <button>Add to Cart</button>
+
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/men-golf-polo-t-shirt-blue.jpg">
+            <p>Men's Regular Fit Quick-</p>
+            <p>Dry Golf Polo Shirt</p>
+            <img class="ratings" src="amazonStyle.css/rating-45 (1).png">2556
+            <p>$15.99</p>
+            <select id="23">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+            <button>Add to Cart</button>
+
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/trash-can-with-foot-pedal-50-liter.jpg">
+            <p>Trash can with foot </p>
+            <p>pedal 50 liter</p>
+            <img class="ratings" src="amazonStyle.css/rating-45 (1).png">388
+            <p>$33.40</p>
+            <select id="24">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/duvet-cover-set-blue-twin.jpg">
+            <p>Duvet Cover Set with</p>
+            <p>Zipper Closure</p>
+            <img class="ratings" src="amazonStyle.css/rating-4.png">456
+            <p>$23.99</p>
+            <select id="25">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                 </select>
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/women-chunky-beanie-gray.webp">
+            <p>Women's Chunky Cable</p>
+            <p>Beanie - Gray</p>
+            <img class="ratings" src="amazonStyle.css/rating-5.png">83
+            <p>$12.50</p>
+            <select id="26">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                 </select>
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/men-chino-pants-beige.jpg">
+            <p>Men's Classic-fit Pleater</p>
+            <p>Chino Pants</p>
+            <img class="ratings" src="amazonStyle.css/rating-45 (1).png">9017
+            <p>$22.90</p>
+            <select id="27">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                 </select>
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/men-athletic-shoes-green.jpg">
+            <p>Men's Athletic Sneaker</p>
+            <img class="ratings" src="amazonStyle.css/rating-4.png">229
+            <p>$38.90</p>
+            <select id="28">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                 </select>
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/men-navigator-sunglasses-brown.jpg">
+            <p>Men's Navigator</p>
+            <p>Sunglasses Pilot</p>
+            <img class="ratings" src="amazonStyle.css/rating-4.png">42
+            <p>$16.90</p>
+            <select id="29">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+         </select>
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/non-stick-cooking-set-15-pieces.webp">
+            <p>Non-Stick CookingWire</p>
+            <p>Set pot,pans and...</p>
+            <img class="ratings" src="amazonStyle.css/rating-45.png">
+            <p>$67.97</p>
+            <select id="30">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+          </select>
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/vanity-mirror-silver.jpg">
+            <p>Vanity Mirror With Heavy</p>
+            <p>Base - Chrome</p>
+            <img class="ratings" src="amazonStyle.css/rating-45.png">130
+            <p>$16.49</p>
+            <select id="31">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+          </select>
+            <button>Add to Cart</button>
+
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/women-french-terry-fleece-jogger-camo.jpg">
+            <p>Women's Fleece Jogger</p>
+            <p>Sweatpant</p>
+            <img class="ratings" src="amazonStyle.css/rating-45.png">248
+            <p>$24.00</p>
+            <select id="32">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+          </select>
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/double-elongated-twist-french-wire-earrings.webp">
+            <p>Double Oval Twist</p>
+            <img class="ratings" src="amazonStyle.css/rating-45.png">117
+            <p>$24.00</p>
+            <select id="33">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+          </select>
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/round-airtight-food-storage-containers.jpg">
+            <p>Round Alright Food</p>
+            <p>Storage Containers -5...</p>
+            <img class="ratings" src="amazonStyle.css/rating-4.png">126
+            <p>$28/99</p>
+            <select id="34">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+          </select>
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/coffeemaker-with-glass-carafe-black.jpg">
+            <p>CoffeeMaker with Glass Carafe and Reusable</p>
+            <img class="ratings" src="amazonStyle.css/rating-45.png">1211
+            <p>$22.50</p>
+            <select id="35">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+          </select>
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/blackout-curtains-black.jpg">
+            <p>Blackout Curtains Set</p>
+            <p>42 * 84 inch Black</p>
+            <img class="ratings" src="amazonStyle.css/rating-45.png">263
+            <p>$36.99</p>
+            <select id="36">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+          </select>
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/cotton-bath-towels-teal.webp">
+            <p>100% Cotton Bath</p>
+            <p>Towels - 2 Pack,Light...</p>
+            <img class="ratings" src="amazonStyle.css/rating-45.png">93
+            <p>$21.10</p>
+            <select id="37">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+          </select>
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/knit-athletic-sneakers-pink.webp">
+            <p>Waterproof Knit Athletic</p>
+            <p>Sneakers - Pink</p>
+            <img class="ratings" src="amazonStyle.css/rating-4.png">
+            <p>$33.90</p>
+            <select id="38">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+          </select>
+            <button>Add to Cart</button>
+
+
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/countertop-blender-64-oz.jpg">
+            <p>64oz,1400 Watts</p>
+            <img class="ratings" src="amazonStyle.css/rating-4.png">3
+            <p>$107.47</p>
+            <select id="39">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+          </select>
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/floral-mixing-bowl-set.jpg">
+            <p>10-Piece Mixing Bowl</p>
+            <p>Set with Lids - Floral</p>
+            <img class="ratings" src="amazonStyle.css/rating-5.png">
+            <p>$38.99</p>
+            <select id="40">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+          </select>
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/kitchen-paper-towels-30-pack.jpg">
+            <p>2 Ply Kitchen Paper</p>
+            <p>Towels - 30 Pack</p>
+            <img class="ratings" src="amazonStyle.css/rating-45.png">1045
+            <p>$57.99</p>
+            <select id="41">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+          </select>
+            <button>Add to Cart</button>
+        </div>
+        <div class="section1">
+            <img src="amazonStyle.css/men-cozy-fleece-zip-up-hoodie-red.jpg">
+            <p> Men's Full-Zip </p>
+            <p>Hooded Fleece Sweatshirt</p>
+            <img class="ratings" src="amazonStyle.css/rating-45.png">3157
+            <p>$24.00</p>
+            <select id="42">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+          </select>
+            <button>Add to Cart</button>
+
+        </div>
+    </div>
 </body>
 
 </html>
